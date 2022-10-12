@@ -29,7 +29,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 
 @RestController
 @RequestMapping("/api/v1.0/market/company")
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @Tag(name = "Company Commands", description = "This is a controller for command operations on Company Resource")
 public class CompanyCommandController {
 
@@ -46,7 +46,7 @@ public class CompanyCommandController {
 	@ApiResponses(value = { @ApiResponse(responseCode = "200", description = "OK"),
 			@ApiResponse(responseCode = "500", description = "Bad Request"),
 			@ApiResponse(responseCode = "404", description = "Not found") })
-	public String registerCompany(@RequestBody @Valid CompanyRegistrationRequest companyRegistrationRequest) {
+	public @ResponseBody String registerCompany(@RequestBody @Valid CompanyRegistrationRequest companyRegistrationRequest) {
 		log.debug("Inside registerCompany() of CompanyCommandController");
 
 		RegisterCompanyCommand registerCompanyCommand = new RegisterCompanyCommand(

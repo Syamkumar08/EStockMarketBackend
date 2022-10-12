@@ -28,7 +28,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  */
 @RestController
 @RequestMapping(value = "/api/v1.0/market/stock/")
-@CrossOrigin(origins = "*")
+@CrossOrigin
 @Tag(name = "Stock Query", description = "This is a controller for query operations on Stock Resource")
 public class StockQueryController {
 

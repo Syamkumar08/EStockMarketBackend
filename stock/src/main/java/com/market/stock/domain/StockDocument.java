@@ -22,7 +22,7 @@ import lombok.ToString;
 //@AllArgsConstructor
 //@NoArgsConstructor
 @ToString
-@Document("stock")
+@Document(collection = "stock")
 public class StockDocument {
 
 	@Id
