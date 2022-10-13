@@ -14,7 +14,7 @@ import lombok.Setter;
 @Setter
 //@AllArgsConstructor
 //@NoArgsConstructor
-@Document(collection = "company")
+@Document("company")
 public class CompanyDocument {
 
 	// @MongoId() // @Indexed(unique = true)
